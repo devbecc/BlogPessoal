@@ -28,10 +28,9 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-            "./node_modules/jquery/dist/jquery.js",
-            "./node_modules/bootstrap/dist/js/bootstrap.js",
-            "./node_modules/popper.js/dist/umd/popper.min.js"
-
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js"
             ]
           },
           "configurations": {
@@ -129,6 +128,6 @@
   },
   "defaultProject": "blogPessoal",
   "cli": {
-    "analytics": "b6c1ce71-fefc-4bd5-b6d6-7d0d28563346"
+    "analytics": "435c282c-d467-4273-8ea4-b2fea4d7b134"
   }
 }
