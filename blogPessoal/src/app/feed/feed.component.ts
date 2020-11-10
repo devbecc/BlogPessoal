@@ -11,9 +11,8 @@ import { TemaService } from '../service/tema.service';
 })
 export class FeedComponent implements OnInit {
 
-  constructor(private postagemService: PostagemService,
-              private temaService: TemaService)
-      { }
+  key = 'data'
+  reverse= true
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
@@ -22,6 +21,12 @@ export class FeedComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas:Tema []
   idTema: number
+
+  constructor(private postagemService: PostagemService,
+              private temaService: TemaService)
+      { }
+
+ 
 
   ngOnInit(){
     window.scroll( 0, 0 )
@@ -49,12 +54,37 @@ findAllTemas(){
 }
 
 
+
 findByIdTema(){
 
-    this.temaService.getByIdTema(this.idTema).subscribe((resp:Tema)=>{
-      this.tema= resp;
-    })
+  this.temaService.getByIdTema(this.idTema).subscribe((resp:Tema)=>{
+    this.tema= resp;
+  })
 
 }
+
+
+publicar(){
+  
+  this.tema.id=this.idTema
+  this.postagem.tema=this.tema
+
+  if(this.postagem.titulo == null || this.postagem.texto || this.postagem.tema == null){
+
+    alert('Preencha todos os campos de publicar')
+  }
+    else{
+
+      this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
+        this.postagem = resp
+        this.postagem= new Postagem()
+        alert ('Postagem realizada com sucesso!')
+        this.finAllPostagens()
+      }
+      )}
+
+}
+
+
 
 }
