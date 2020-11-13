@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeedComponent } from './feed.component';
+import { DeletePostagemComponent } from './delete-postagem.component';
 
-describe('FeedComponent', () => {
-  let component: FeedComponent;
-  let fixture: ComponentFixture<FeedComponent>;
+describe('DeletePostagemComponent', () => {
+  let component: DeletePostagemComponent;
+  let fixture: ComponentFixture<DeletePostagemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeedComponent ]
+      declarations: [ DeletePostagemComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FeedComponent);
+    fixture = TestBed.createComponent(DeletePostagemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
