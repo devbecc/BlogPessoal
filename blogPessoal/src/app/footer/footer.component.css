@@ -18,13 +18,19 @@ ul.social-network li {
 }
 
 .faFacebook:hover{
-	color: #3b5998;
+	color: #e1732b;
 }
 
 .faLinkedin:hover{
-	color: #0072b1;
+	color: #e1732b
 }
 
 .faInstagram:hover{
-	color: #C13584;
+	color: #e1732b;
 }
+
+.bgFooter{ 
+    background:-webkit-linear-gradient(#ea00ff, #0088CC, #e1732b) ;
+}
+
+
